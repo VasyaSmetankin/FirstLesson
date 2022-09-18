@@ -16,12 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello World!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LG4-Jx-9ct">
-                                <rect key="frame" x="105" y="142" width="218" height="47"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="39"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LSh-UH-Zax">
                                 <rect key="frame" x="125.66666666666669" y="735" width="177" height="43"/>
                                 <constraints>
@@ -31,7 +25,16 @@
                                 <buttonConfiguration key="configuration" style="gray" title="Show Greeting">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="24"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="GreetingButtonDidTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="d0P-jJ-bah"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello World!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LG4-Jx-9ct">
+                                <rect key="frame" x="105" y="144" width="218" height="47"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="39"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -40,9 +43,13 @@
                             <constraint firstItem="LG4-Jx-9ct" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="105" id="Qtl-kX-aQ6"/>
                             <constraint firstItem="LSh-UH-Zax" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TPf-P6-dnz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LG4-Jx-9ct" secondAttribute="trailing" constant="105" id="cGM-ge-2Dz"/>
-                            <constraint firstItem="LG4-Jx-9ct" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="98" id="pKh-Vl-If3"/>
+                            <constraint firstItem="LG4-Jx-9ct" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="pKh-Vl-If3"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greetingButton" destination="LSh-UH-Zax" id="FzA-lu-tSS"/>
+                        <outlet property="greetingLabel" destination="LG4-Jx-9ct" id="WZU-Rg-toa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
